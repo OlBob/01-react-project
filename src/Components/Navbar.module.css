@@ -1,0 +1,21 @@
+.nav {
+    grid-area: nav;
+    background-color: darkseagreen;
+    padding: 10px;
+}
+
+.item {
+    color: #fff;
+}
+
+.item a {
+    color: inherit;
+    text-decoration: none;
+    transition: all .1s linear;
+}
+
+.item a:hover {
+    color: #0072e1;
+    text-decoration: underline;
+    text-shadow: 2px 2px  5px #FFF;
+}
