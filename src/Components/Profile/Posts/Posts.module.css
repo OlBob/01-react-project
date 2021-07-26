@@ -1,0 +1,16 @@
+.profile {
+    grid-area: profile;
+    background-color: gainsboro;
+}
+
+.posts {
+    padding: 10px;
+}
+
+.publishedPosts {
+    margin-top: 1em;
+}
+
+.item {
+    font-weight: bold;
+}

@@ -1,0 +1,29 @@
+.myInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.myInfo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: -60px;
+    border: 4px solid #dcdcdc;
+}
+
+.aboutMe {
+    background-color: #fff;
+    width: fit-content;
+    padding: 24px 48px;
+    border-radius: 8px;
+}
+
+p {
+
+    margin-block-start: unset;
+    margin-block-end: unset;
+    margin-inline-start: unset;
+    margin-inline-end: unset;
+}

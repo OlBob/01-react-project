@@ -1,0 +1,28 @@
+.myPost {
+
+}
+
+.myPost textarea {
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.buttons button {
+    border-radius: 5px;
+    padding: 6px 24px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.delete {
+    background-color: #fff;
+}
+
+.submit {
+    background-color: #fff;
+}
