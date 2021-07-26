@@ -16,6 +16,11 @@
 
 }
 
+.dialogsItems .dialog a {
+    color: initial;
+    text-decoration: none;
+}
+
 .messages {
 
 }
