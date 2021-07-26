@@ -1,4 +1,25 @@
 .dialogs {
-    /*grid-area: profile;*/
-    /*background-color: gainsboro;*/
+    display: grid;
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 2fr 10fr;
+}
+
+.dialogsItems {
+    padding: 10px;
+}
+
+.dialogsItems .active {
+    color: crimson;
+}
+
+.dialogsItems .dialog {
+
+}
+
+.messages {
+
+}
+
+.messages .message {
+
 }
