@@ -14,6 +14,12 @@
     transition: all .1s linear;
 }
 
+.item a.activeLink {
+    color: gold;
+    text-decoration: none;
+    transition: all .1s linear;
+}
+
 .item a:hover {
     color: #0072e1;
     text-decoration: underline;
