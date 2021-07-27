@@ -8,19 +8,6 @@
     padding: 10px;
 }
 
-.dialogsItems .active {
-    color: crimson;
-}
-
-.dialogsItems .dialog {
-
-}
-
-.dialogsItems .dialog a {
-    color: initial;
-    text-decoration: none;
-}
-
 .messages {
 
 }

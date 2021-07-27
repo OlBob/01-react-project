@@ -1,0 +1,12 @@
+.dialog.active {
+    color: crimson;
+}
+
+.dialogsItems .dialog {
+
+}
+
+.dialog a {
+    color: initial;
+    text-decoration: none;
+}

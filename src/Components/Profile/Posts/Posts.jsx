@@ -9,7 +9,7 @@ const Posts = () => {
 
   return (
     <div className={style.posts}>
-      <div>My posts</div>
+      <h3>My posts</h3>
       <CreatePost />
       <div className={style.publishedPosts}>
         <Post message="Hi, how are you?" likesCount="15" />
