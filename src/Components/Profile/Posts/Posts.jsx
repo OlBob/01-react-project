@@ -5,10 +5,12 @@ import CreatePost from "./CreatePost/CreatePost";
 
 const Posts = () => {
 
-  let postsData = [
+  let posts = [
     {id: 1, message: "Hi, how are you?", likesCount: 15,},
     {id: 2, message: "It's my first post", likesCount: 20,}
   ]
+
+  let postsElements = posts.map( p => <Post key={p.id} message={p.message} likesCount={p.likesCount}/> )
 
   return (
     <div className={style.posts}>
@@ -16,9 +18,7 @@ const Posts = () => {
       <CreatePost/>
       <div className={style.publishedPosts}>
         {
-          postsData.map(content =>
-            <Post key={content.id} message={content.message} likesCount={content.likesCount}/>
-          )
+          postsElements
         }
       </div>
     </div>
