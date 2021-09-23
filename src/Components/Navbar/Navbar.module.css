@@ -1,7 +1,8 @@
 .nav {
     grid-area: nav;
-    background-color: darkseagreen;
+    background-color: #474b4f;
     padding: 10px;
+    height: 100%;
 }
 
 .item {
@@ -11,17 +12,19 @@
 .item a {
     color: inherit;
     text-decoration: none;
-    transition: all .1s linear;
+    transition: all .2s linear;
 }
 
 .item a.activeLink {
-    color: gold;
+    color: #86c232;
     text-decoration: none;
-    transition: all .1s linear;
+    transition: all .2s linear;
+    font-weight: bold;
 }
 
 .item a:hover {
-    color: #0072e1;
-    text-decoration: underline;
-    text-shadow: 2px 2px  5px #FFF;
+    color: #61892f;
+    transform: scale(1.1);
+    /*text-decoration: underline;*/
+    /*text-shadow: 2px 2px  5px #FFF;*/
 }

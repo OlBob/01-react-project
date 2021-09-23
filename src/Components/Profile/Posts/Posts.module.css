@@ -7,6 +7,12 @@
     padding: 10px;
 }
 
+.posts h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
 .publishedPosts {
     margin-top: 1em;
 }

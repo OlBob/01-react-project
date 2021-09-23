@@ -1,4 +1,31 @@
 let state = {
+  navbarPage: {
+    navLinks: [
+      {url: "/profile", name: "Profile"},
+      {url: "/dialogs", name: "Messages"},
+      {url: "/news", name: "News"},
+      {url: "/music", name: "Music"},
+      {url: "/settings", name: "Settings"},
+    ],
+    activeFriends: [
+      {
+        name: "Alex",
+        avatar: "https://i.pinimg.com/474x/51/f6/fb/51f6fb256629fc755b8870c801092942.jpg",
+      },
+      {
+        name: "Pasha",
+        avatar: "https://i.pinimg.com/474x/51/f6/fb/51f6fb256629fc755b8870c801092942.jpg",
+      },
+      {
+        name: "Pjotr",
+        avatar: "https://i.pinimg.com/474x/51/f6/fb/51f6fb256629fc755b8870c801092942.jpg",
+      },
+      {
+        name: "Stas",
+        avatar: "https://i.pinimg.com/474x/51/f6/fb/51f6fb256629fc755b8870c801092942.jpg",
+      },
+    ],
+  },
   profilePage: {
     posts: [
       {id: 1, message: "Hi, how are you?", likesCount: 15,},

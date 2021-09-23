@@ -11,14 +11,19 @@ import Music from "./Components/Music/Music";
 import Settings from "./Components/Settings/Settings";
 
 
+
 const App = (props) => {
-  let {profilePage: {posts}, dialogsPage: {messages, dialogs}} = props.state;
+  let {
+    profilePage: {posts},
+    dialogsPage: {messages, dialogs},
+    navbarPage: {navLinks, activeFriends},
+  } = props.state;
 
   return (
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
-        <Navbar />
+        <Navbar navLinks={navLinks} activeFriends={activeFriends} />
         <div className="app-wrapper-content">
           <Route
             path="/profile"
