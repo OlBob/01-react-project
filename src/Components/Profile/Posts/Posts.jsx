@@ -3,14 +3,9 @@ import style from "./Posts.module.css";
 import Post from "./Post/Post";
 import CreatePost from "./CreatePost/CreatePost";
 
-const Posts = () => {
+const Posts = (props) => {
 
-  let posts = [
-    {id: 1, message: "Hi, how are you?", likesCount: 15,},
-    {id: 2, message: "It's my first post", likesCount: 20,}
-  ]
-
-  let postsElements = posts.map( p => <Post key={p.id} message={p.message} likesCount={p.likesCount}/> )
+  let postsElements = props.posts.map( p => <Post key={p.id} message={p.message} likesCount={p.likesCount}/> )
 
   return (
     <div className={style.posts}>
