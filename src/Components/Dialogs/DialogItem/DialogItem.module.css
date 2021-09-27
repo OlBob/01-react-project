@@ -9,4 +9,17 @@
 .dialog a {
     color: initial;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.dialog a img {
+    max-width: 40px;
+    border-radius: 50%;
+}
+
+.dialog a p {
+    padding: 0 5px;
+    color: #fff;
 }

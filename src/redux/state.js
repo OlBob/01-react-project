@@ -1,5 +1,5 @@
 let state = {
-  navbarPage: {
+  navbar: {
     navLinks: [
       {url: "/profile", name: "Profile"},
       {url: "/dialogs", name: "Messages"},
@@ -45,12 +45,12 @@ let state = {
       {id: 6, message: "I'm new here!"},
     ],
     dialogs: [
-      {id: 1, name: "Alex"},
-      {id: 2, name: "Pyotr"},
-      {id: 3, name: "Max"},
-      {id: 4, name: "Mustafa"},
-      {id: 5, name: "Lily"},
-      {id: 6, name: "Leo"},
+      {id: 1, name: "Alex", avatar: "https://i.pinimg.com/474x/51/f6/fb/51f6fb256629fc755b8870c801092942.jpg",},
+      {id: 2, name: "Pyotr", avatar: "https://i.pinimg.com/474x/51/f6/fb/51f6fb256629fc755b8870c801092942.jpg",},
+      {id: 3, name: "Max", avatar: "https://i.pinimg.com/474x/51/f6/fb/51f6fb256629fc755b8870c801092942.jpg",},
+      {id: 4, name: "Mustafa", avatar: "https://i.pinimg.com/474x/51/f6/fb/51f6fb256629fc755b8870c801092942.jpg",},
+      {id: 5, name: "Lily", avatar: "https://i.pinimg.com/474x/51/f6/fb/51f6fb256629fc755b8870c801092942.jpg",},
+      {id: 6, name: "Leo", avatar: "https://i.pinimg.com/474x/51/f6/fb/51f6fb256629fc755b8870c801092942.jpg",},
     ],
   },
 

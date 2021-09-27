@@ -10,8 +10,29 @@
 
 .messages {
     padding: 10px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    max-width: calc(100vw/2);
 }
 
 .messages .message {
     color: darkcyan;
+    background-color: #fff;
+    padding: 5px 15px;
+    margin-bottom: 5px;
+    width: fit-content;
+    min-width: 200px;
+    min-height: 35px;
+    position: relative;
+}
+
+.messages .message:nth-child(2n+1) {
+    border-radius: 7px;
+    border-top-left-radius: 0;
+}
+.messages .message:nth-child(2n) {
+    border-radius: 7px;
+    border-top-right-radius: 0;
+    align-self: end;
 }
