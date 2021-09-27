@@ -53,8 +53,16 @@ let state = {
       {id: 6, name: "Leo", avatar: "https://i.pinimg.com/474x/51/f6/fb/51f6fb256629fc755b8870c801092942.jpg",},
     ],
   },
+}
 
+export let addPost = (postMessage) => {
+  let newPost = {
+    id: 6,
+    message: postMessage,
+    likesCount: 0,
+  };
 
+  state. profilePage.posts.push(newPost)
 }
 
 export default state;

@@ -5,12 +5,13 @@ import CreatePost from "./CreatePost/CreatePost";
 
 const Posts = (props) => {
 
+
   let postsElements = props.posts.map( p => <Post key={p.id} message={p.message} likesCount={p.likesCount}/> )
 
   return (
     <div className={style.posts}>
       <h3>My posts</h3>
-      <CreatePost/>
+      <CreatePost addPost={props.addPost} />
       <div className={style.publishedPosts}>
         {
           postsElements

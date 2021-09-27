@@ -14,7 +14,6 @@ const NavbarItem = (props) => {
 }
 
 const Navbar = (props) => {
-  // debugger;
   let {navLinks, activeFriends} = props;
   let navigation = navLinks.map( link =>  <NavbarItem url={link.url} name={link.name} />)
 

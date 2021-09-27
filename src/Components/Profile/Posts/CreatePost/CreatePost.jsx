@@ -2,21 +2,18 @@ import React from "react";
 import style from "./CreatePost.module.css";
 
 
-const CreatePost = () => {
+const CreatePost = (props) => {
 
   let newPostElement = React.createRef();
 
   let addPost = () => {
+    debugger
     let text = newPostElement.current.value;
-
-    alert(text)
+    props.addPost(text);
   }
 
   let removeContent = () => {
-    let text = newPostElement.current.value;
 
-    text  = '';
-    return text;
   }
 
   return (
@@ -24,7 +21,8 @@ const CreatePost = () => {
       <textarea
           ref={newPostElement}
           name="Message"
-          rows="5"></textarea>
+          rows="5">
+      </textarea>
       <div className={style.buttons}>
         <button
             className={style.submit}
