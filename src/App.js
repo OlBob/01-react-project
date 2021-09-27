@@ -28,7 +28,8 @@ const App = (props) => {
               path="/profile"
               render={ () => <Profile
                   posts={posts}
-                  addPost={props.addPost} />} />
+                  addPost={props.addPost}
+                  changeValue={props.changeValue} />} />
           <Route
               path="/dialogs"
               render={ () => <Dialogs

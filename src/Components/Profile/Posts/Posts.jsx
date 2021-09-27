@@ -11,7 +11,7 @@ const Posts = (props) => {
   return (
     <div className={style.posts}>
       <h3>My posts</h3>
-      <CreatePost addPost={props.addPost} />
+      <CreatePost addPost={props.addPost} changeValue={props.changeValue}/>
       <div className={style.publishedPosts}>
         {
           postsElements

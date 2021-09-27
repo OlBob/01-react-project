@@ -1,4 +1,7 @@
+import {rerenderEntireTree} from "../render";
+
 let state = {
+  currentPostValue: '',
   navbar: {
     navLinks: [
       {url: "/profile", name: "Profile"},
@@ -55,14 +58,24 @@ let state = {
   },
 }
 
+export let changeValue = (value) => {
+  state.currentPostValue = value;
+  rerenderEntireTree(state);
+
+  if (value.length > 10) console.log(state.currentPostValue)
+
+  return state.currentPostValue;
+}
+
 export let addPost = (postMessage) => {
   let newPost = {
-    id: 6,
+    id: state.profilePage.posts.length + 1,
     message: postMessage,
     likesCount: 0,
   };
 
-  state. profilePage.posts.push(newPost)
+  state. profilePage.posts.push(newPost);
+  rerenderEntireTree(state)
 }
 
 export default state;

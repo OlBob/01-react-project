@@ -6,19 +6,22 @@ const CreatePost = (props) => {
 
   let newPostElement = React.createRef();
 
-  let addPost = () => {
-    debugger
+  let changeContent = () => {
     let text = newPostElement.current.value;
-    props.addPost(text);
+    newPostElement.current.value = props.changeValue(text);
   }
 
-  let removeContent = () => {
-
+  let addPost = () => {
+    let text = newPostElement.current.value;
+    props.addPost(text);
+    newPostElement.current.value = '';
   }
 
   return (
     <div className={style.myPost}>
       <textarea
+          // onChange={() => alert("event")}
+          onChange={changeContent}
           ref={newPostElement}
           name="Message"
           rows="5">
@@ -29,7 +32,9 @@ const CreatePost = (props) => {
             onClick={ addPost } >Add post</button>
         <button
             className={ style.delete }
-            onClick={ removeContent } >Delete</button>
+            // onClick={ removeContent }
+        >Delete
+        </button>
       </div>
     </div>
   )
