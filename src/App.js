@@ -14,7 +14,7 @@ import Settings from "./Components/Settings/Settings";
 
 const App = (props) => {
   let {
-    profilePage: {posts},
+    profilePage,
     dialogsPage: {messages, dialogs},
     navbar: {navLinks, activeFriends},
   } = props.state;
@@ -27,9 +27,9 @@ const App = (props) => {
           <Route
               path="/profile"
               render={ () => <Profile
-                  posts={posts}
+                  profilePage={profilePage}
                   addPost={props.addPost}
-                  changeValue={props.changeValue} />} />
+                  updateNewPostText={props.updateNewPostText} />} />
           <Route
               path="/dialogs"
               render={ () => <Dialogs

@@ -6,22 +6,21 @@ const CreatePost = (props) => {
 
   let newPostElement = React.createRef();
 
-  let changeContent = () => {
+  let onPostChange = () => {
     let text = newPostElement.current.value;
-    newPostElement.current.value = props.changeValue(text);
+    props.updateNewPostText(text);
   }
 
   let addPost = () => {
-    let text = newPostElement.current.value;
-    props.addPost(text);
-    newPostElement.current.value = '';
+    props.addPost();
   }
 
   return (
     <div className={style.myPost}>
       <textarea
-          // onChange={() => alert("event")}
-          onChange={changeContent}
+          onChange={onPostChange}
+          value={props.newPostText}
+          placeholder="Input your text"
           ref={newPostElement}
           name="Message"
           rows="5">

@@ -1,7 +1,6 @@
 import {rerenderEntireTree} from "../render";
 
 let state = {
-  currentPostValue: '',
   navbar: {
     navLinks: [
       {url: "/profile", name: "Profile"},
@@ -37,6 +36,7 @@ let state = {
       {id: 4, message: "It's my third post", likesCount: 15,},
       {id: 5, message: "It's my forth post", likesCount: 55,},
     ],
+    newPostText: 'Input Your text',
   },
   dialogsPage: {
     messages: [
@@ -58,23 +58,20 @@ let state = {
   },
 }
 
-export let changeValue = (value) => {
-  state.currentPostValue = value;
+export let updateNewPostText = (newText) => {
+  state.profilePage.newPostText = newText;
   rerenderEntireTree(state);
-
-  if (value.length > 10) console.log(state.currentPostValue)
-
-  return state.currentPostValue;
 }
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
   let newPost = {
     id: state.profilePage.posts.length + 1,
-    message: postMessage,
+    message: state.profilePage.newPostText,
     likesCount: 0,
   };
 
   state. profilePage.posts.push(newPost);
+  state.profilePage.newPostText ='';
   rerenderEntireTree(state)
 }
 

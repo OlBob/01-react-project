@@ -6,16 +6,18 @@ import CreatePost from "./CreatePost/CreatePost";
 const Posts = (props) => {
 
 
-  let postsElements = props.posts.map( p => <Post key={p.id} message={p.message} likesCount={p.likesCount}/> )
+  let postsElements = props.profilePage.posts.map( p => <Post key={p.id} message={p.message} likesCount={p.likesCount}/> )
 
   return (
     <div className={style.posts}>
       <h3>My posts</h3>
-      <CreatePost addPost={props.addPost} changeValue={props.changeValue}/>
+      <CreatePost
+          newPostText={props.profilePage.newPostText}
+          addPost={props.addPost}
+          updateNewPostText={props.updateNewPostText}
+      />
       <div className={style.publishedPosts}>
-        {
-          postsElements
-        }
+          { postsElements }
       </div>
     </div>
   )
