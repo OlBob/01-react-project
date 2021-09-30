@@ -13,8 +13,7 @@ const Posts = (props) => {
       <h3>My posts</h3>
       <CreatePost
           newPostText={props.profilePage.newPostText}
-          addPost={props.addPost}
-          updateNewPostText={props.updateNewPostText}
+          dispatch={props.dispatch}
       />
       <div className={style.publishedPosts}>
           { postsElements }
