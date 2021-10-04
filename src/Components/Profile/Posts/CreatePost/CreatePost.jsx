@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./CreatePost.module.css";
-import {addPostCreator, updateNewPostTextChangeCreator} from "../../../../redux/state";
+import {addPostCreator, updateNewPostTextChangeCreator} from "../../../../redux/profile-reducer";
 
 
 
