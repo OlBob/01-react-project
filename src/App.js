@@ -14,7 +14,7 @@ const App = (props) => {
     profilePage,
     dialogsPage,
     navbar: { navLinks, activeFriends },
-  } = props.state;
+  } = props.store.getState();
 
   return (
     <div className="app-wrapper">
