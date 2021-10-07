@@ -6,29 +6,33 @@ let store = {
   _state: {
     navbar: {
       navLinks: [
-        { url: "/profile", name: "Profile" },
-        { url: "/dialogs", name: "Messages" },
-        { url: "/news", name: "News" },
-        { url: "/music", name: "Music" },
-        { url: "/settings", name: "Settings" },
+        { id: 1, url: "/profile", name: "Profile" },
+        { id: 2, url: "/dialogs", name: "Messages" },
+        { id: 3, url: "/news", name: "News" },
+        { id: 4, url: "/music", name: "Music" },
+        { id: 5, url: "/settings", name: "Settings" },
       ],
       activeFriends: [
         {
+          id: 1,
           name: "Alex",
           avatar:
             "https://i.pinimg.com/474x/51/f6/fb/51f6fb256629fc755b8870c801092942.jpg",
         },
         {
+          id: 2,
           name: "Pasha",
           avatar:
             "https://i.pinimg.com/474x/51/f6/fb/51f6fb256629fc755b8870c801092942.jpg",
         },
         {
+          id: 3,
           name: "Pjotr",
           avatar:
             "https://i.pinimg.com/474x/51/f6/fb/51f6fb256629fc755b8870c801092942.jpg",
         },
         {
+          id: 4,
           name: "Stas",
           avatar:
             "https://i.pinimg.com/474x/51/f6/fb/51f6fb256629fc755b8870c801092942.jpg",

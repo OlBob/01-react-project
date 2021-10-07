@@ -10,16 +10,12 @@ import Settings from "./Components/Settings/Settings";
 import DialogsContainer from "./Components/Dialogs/DialogsContainer";
 
 const App = (props) => {
-  let {
-    profilePage,
-    dialogsPage,
-    navbar: { navLinks, activeFriends },
-  } = props.store.getState();
+  let { profilePage, dialogsPage, navbar } = props.store.getState();
 
   return (
     <div className="app-wrapper">
       <Header />
-      <Navbar navLinks={navLinks} activeFriends={activeFriends} />
+      <Navbar navbar={navbar} />
       <div className="app-wrapper-content">
         <Route path="/profile" render={() => <Profile />} />
         <Route path="/dialogs" render={() => <DialogsContainer />} />
