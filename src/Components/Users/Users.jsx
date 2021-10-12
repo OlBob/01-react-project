@@ -1,9 +1,11 @@
 import React from "react";
 import c from "./Users.module.css";
+import * as axios from "axios";
+import userPhoto from "../../assets/images/user.png";
 
 let Users = (props) => {
   if (props.users.length === 0) {
-    props.setUsers([
+    /*props.setUsers([
       {
         id: 1,
         photoUrl:
@@ -31,7 +33,20 @@ let Users = (props) => {
         status: "Traveling",
         location: { city: "Kiev", country: "Ukraine" },
       },
-    ]);
+    ]);*/
+
+    axios
+      .get("https://social-network.samuraijs.com/api/1.0/users", {
+        withCredentials: true,
+        baseURL: "https://social-network.samuraijs.com/api/1.0/",
+        headers: {
+          "API-KEY": "cd15c007-31db-47b6-b737-d5df452f1ba3",
+        },
+      })
+      .then((response) => {
+        // debugger;
+        props.setUsers(response.data.items);
+      });
   }
 
   return (
@@ -40,7 +55,11 @@ let Users = (props) => {
         <div key={u.id}>
           <span>
             <div className={c.userPhotoCont}>
-              <img src={u.photoUrl} className={c.userPhoto} alt="" />
+              <img
+                src={u.photoUrl || userPhoto}
+                className={c.userPhoto}
+                alt=""
+              />
             </div>
             <div>
               {u.followed ? (
@@ -52,12 +71,12 @@ let Users = (props) => {
           </span>
           <span>
             <span>
-              <div>{u.fullName}</div>
+              <div>{u.name}</div>
               <div>{u.status}</div>
             </span>
             <span>
-              <div>{u.location.country}</div>
-              <div>{u.location.city}</div>
+              <div>{"u.location.country"}</div>
+              <div>{"u.location.city"}</div>
             </span>
           </span>
         </div>
