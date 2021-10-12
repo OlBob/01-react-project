@@ -1,0 +1,20 @@
+.usersPage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.userPhotoCont {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:  50%;
+    overflow: hidden;
+}
+
+.userPhoto {
+    height: 100%;
+    width: auto;
+}

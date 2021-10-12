@@ -3,14 +3,15 @@ import profileReducer from "./profile-reducer";
 import navbarReducer from "./navbar-reducer";
 
 let store = {
-  _state: {
+  /*_state: {
     navbar: {
       navLinks: [
         { id: 1, url: "/profile", name: "Profile" },
         { id: 2, url: "/dialogs", name: "Messages" },
-        { id: 3, url: "/news", name: "News" },
-        { id: 4, url: "/music", name: "Music" },
-        { id: 5, url: "/settings", name: "Settings" },
+        { id: 3, url: "/users", name: "Users" },
+        { id: 4, url: "/news", name: "News" },
+        { id: 5, url: "/music", name: "Music" },
+        { id: 6, url: "/settings", name: "Settings" },
       ],
       activeFriends: [
         {
@@ -98,7 +99,7 @@ let store = {
         },
       ],
     },
-  },
+  },*/
   _callSubscriber() {
     console.log("State has changed");
   }, //_rerenderEntireTree

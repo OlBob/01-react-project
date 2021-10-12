@@ -1,13 +1,14 @@
-const ADD_POST = "ADD-POST";
-const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
+// const ADD_POST = "ADD-POST";
+// const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
 
 let initialState = {
   navLinks: [
     { id: 1, url: "/profile", name: "Profile" },
     { id: 2, url: "/dialogs", name: "Messages" },
-    { id: 3, url: "/news", name: "News" },
-    { id: 4, url: "/music", name: "Music" },
-    { id: 5, url: "/settings", name: "Settings" },
+    { id: 3, url: "/users", name: "Users" },
+    { id: 4, url: "/news", name: "News" },
+    { id: 5, url: "/music", name: "Music" },
+    { id: 6, url: "/settings", name: "Settings" },
   ],
   activeFriends: [
     {
