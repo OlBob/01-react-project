@@ -17,6 +17,17 @@
     border-radius: 8px;
 
 }
+.numberPages {
+    overflow: hidden;
+}
+.numberPages span {
+    cursor: pointer;
+    margin-left: 8px;
+}
+.numberPages .selectedPage {
+    font-weight: bold;
+    text-decoration: underline;
+}
 
 .userPhotoCont {
     width: 150px;
