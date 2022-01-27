@@ -17,6 +17,7 @@ img {
 }
 
 .app-wrapper-content {
+  position: relative;
   grid-area: content;
   background-color: #6b6e70;
   height: 100%;
