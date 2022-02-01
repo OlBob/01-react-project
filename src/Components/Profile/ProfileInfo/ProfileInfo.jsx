@@ -7,7 +7,7 @@ const ProfileInfo = (props) => {
     return <Preloader />;
   }
 
-  debugger;
+  // debugger;
   return (
     <div>
       <div className={s.profileBG}>
