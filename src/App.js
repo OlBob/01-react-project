@@ -9,6 +9,7 @@ import Music from "./Components/Music/Music";
 import Settings from "./Components/Settings/Settings";
 import DialogsContainer from "./Components/Dialogs/DialogsContainer";
 import UsersContainer from "./Components/Users/UsersContainer";
+import ProfileContainer from "./Components/Profile/ProfileContainer";
 
 const App = (props) => {
   let { profilePage, dialogsPage, navbar } = props.store.getState();
@@ -18,7 +19,7 @@ const App = (props) => {
       <Header />
       <Navbar navbar={navbar} />
       <div className="app-wrapper-content">
-        <Route path="/profile" render={() => <Profile />} />
+        <Route path="/profile" render={() => <ProfileContainer />} />
         <Route path="/dialogs" render={() => <DialogsContainer />} />
         <Route path="/users" render={() => <UsersContainer />} />
         <Route path="/news" component={News} />
