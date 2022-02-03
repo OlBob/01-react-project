@@ -9,3 +9,18 @@
     height: 40px;
     margin: auto 0;
 }
+
+.loginBlock {
+    float: right;
+}
+
+.loginBlock a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.loginBlock a:hover {
+    color: dodgerblue;
+    text-decoration: underline;
+}
+
