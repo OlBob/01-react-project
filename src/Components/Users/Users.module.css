@@ -19,6 +19,7 @@
 }
 .numberPages {
     overflow: hidden;
+    margin: 48px 24px 36px;
 }
 .numberPages span {
     cursor: pointer;

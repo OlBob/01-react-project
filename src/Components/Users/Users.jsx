@@ -11,7 +11,39 @@ const Users = (props) => {
   }
 
   return (
-    <div className={c.usersPage}>
+    <>
+      <div className={c.usersPage}>
+        {props.users.map((u) => (
+          <div key={u.id}>
+            <span>
+              <div className={c.userPhotoCont}>
+                <img
+                  src={u.photoUrl || userPhoto}
+                  className={c.userPhoto}
+                  alt=""
+                />
+              </div>
+              <div>
+                {u.followed ? (
+                  <button onClick={() => props.unfollow(u.id)}>Unfollow</button>
+                ) : (
+                  <button onClick={() => props.follow(u.id)}>Follow</button>
+                )}
+              </div>
+            </span>
+            <span>
+              <span>
+                <div>{u.name}</div>
+                <div>{u.status}</div>
+              </span>
+              <span>
+                <div>{"u.location.country"}</div>
+                <div>{"u.location.city"}</div>
+              </span>
+            </span>
+          </div>
+        ))}
+      </div>
       <div className={c.numberPages}>
         {pages.map((p) => {
           return (
@@ -19,42 +51,12 @@ const Users = (props) => {
               className={props.currentPage === p ? c.selectedPage : undefined}
               onClick={(e) => props.onPageChanged(p)}
             >
-              {p}
-            </span>
+                {p}
+              </span>
           );
         })}
       </div>
-      {props.users.map((u) => (
-        <div key={u.id}>
-          <span>
-            <div className={c.userPhotoCont}>
-              <img
-                src={u.photoUrl || userPhoto}
-                className={c.userPhoto}
-                alt=""
-              />
-            </div>
-            <div>
-              {u.followed ? (
-                <button onClick={() => props.unfollow(u.id)}>Unfollow</button>
-              ) : (
-                <button onClick={() => props.follow(u.id)}>Follow</button>
-              )}
-            </div>
-          </span>
-          <span>
-            <span>
-              <div>{u.name}</div>
-              <div>{u.status}</div>
-            </span>
-            <span>
-              <div>{"u.location.country"}</div>
-              <div>{"u.location.city"}</div>
-            </span>
-          </span>
-        </div>
-      ))}
-    </div>
+    </>
   );
 };
 
