@@ -33,11 +33,9 @@ const Users = (props) => {
                   <button
                     disabled={props.isFollowInProgress}
                     onClick={() => {
-                      debugger;
                       props.toggleFollowInProgress(true);
                       followAPI.removeFollowParam(u.id)
                         .then((data) => {
-                          debugger
                           if (data.resultCode === 0) props.unfollow(u.id);
                           props.toggleFollowInProgress(false);
                         })
