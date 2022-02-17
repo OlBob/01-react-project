@@ -3,8 +3,11 @@ import c from "./Users.module.css";
 import userPhoto from "../../assets/images/user.png";
 import { NavLink } from "react-router-dom";
 import { followAPI } from "../../api/api";
+import User from "./User";
 
 const Users = (props) => {
+
+  // debugger;
 
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
 
@@ -17,56 +20,14 @@ const Users = (props) => {
     <>
       <div className={c.usersPage}>
         {props.users.map((u) => (
-          <div key={u.id}>
-            <span>
-              <div className={c.userPhotoCont}>
-                <NavLink to={"/profile/" + u.id}>
-                  <img
-                    src={u.photoUrl || userPhoto}
-                    className={c.userPhoto}
-                    alt=""
-                  />
-                </NavLink>
-              </div>
-              <div>
-                {u.followed ? (
-                  <button
-                    disabled={props.isFollowInProgress}
-                    onClick={() => {
-                      props.toggleFollowInProgress(true);
-                      followAPI.removeFollowParam(u.id)
-                        .then((data) => {
-                          if (data.resultCode === 0) props.unfollow(u.id);
-                          props.toggleFollowInProgress(false);
-                        })
-                        .catch( err => console.log(err) );
-                  }}>Unfollow</button>
-                ) : (
-                  <button
-                    disabled={props.isFollowInProgress}
-                    onClick={() => {
-                      props.toggleFollowInProgress(true);
-                      followAPI.setFollowParam(u.id)
-                        .then((data) => {
-                          if (data.resultCode === 0) props.follow(u.id);
-                          props.toggleFollowInProgress(false);
-                        })
-                        .catch( err => console.log(err) );
-                  }}>Follow</button>
-                )}
-              </div>
-            </span>
-              <span>
-              <span>
-                <div>{u.name}</div>
-                <div>{u.status}</div>
-              </span>
-              <span>
-                <div>{"u.location.country"}</div>
-                <div>{"u.location.city"}</div>
-              </span>
-            </span>
-          </div>
+          <User
+            key={u.id}
+            user={u}
+            follow={props.follow}
+            unfollow={props.unfollow}
+            isFollowInProgress={props.isFollowInProgress}
+            toggleFollowInProgress={props.toggleFollowInProgress}
+          />
         ))}
       </div>
       <div className={c.numberPages}>
